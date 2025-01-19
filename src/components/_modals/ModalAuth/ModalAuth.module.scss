@@ -1,0 +1,53 @@
+@import "@/scss";
+
+.inputs {
+    margin: 10px 0;
+}
+
+.input {
+    min-width: 300px;
+    @include mobile-start {
+        min-width: 250px;
+    }
+    &:not(:last-child) {
+        margin: 0 0 10px 0;
+    }
+}
+
+.checkbox {
+    &Text {
+        color: $color-white-main;
+        font-size: $fz-small;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+.button {
+    &Toggle {
+        margin: 10px 0 0 0;
+        color: $color-white-main;
+        text-decoration: underline;
+    }
+    &Actions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 15px;
+
+        &Default {
+            padding: 0 0 15px 0;
+        }
+    }
+    &Top {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 20px;
+    }
+}
+.textarea {
+
+}

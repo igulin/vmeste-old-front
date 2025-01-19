@@ -1,0 +1,81 @@
+@import "@/scss";
+
+.category {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &Header {
+        display: flex;
+        min-height: 100px;
+
+        &Wrapper {
+            position: sticky;
+            top: 70px;
+            z-index: 1;
+            background-color: $color-dark-main;
+
+            &::before {
+                @include absolute-t-l(-200px, 50%);
+                @include width-height(110%, 200px);
+                content: "";
+                background-color: $color-dark-main;
+
+                transform: translateX(-50%);
+
+                z-index: -1;
+            }
+        }
+
+        &Drag {
+            @include fc_;
+
+            gap: 5px;
+
+            &Icon {
+                @include fixed-width-height(20px, 20px);
+
+                cursor: pointer;
+            }
+        }
+
+        &Items {
+            display: flex;
+
+            gap: 5px;
+        }
+        &Item {
+            min-width: 300px;
+        }
+    }
+
+    &Content {
+        flex: 1 1 100%;
+        overflow: auto;
+    }
+
+    &Footer {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background-color: $color-dark-main;
+
+        &Buttons {
+            display: flex;
+            gap: 5px;
+        }
+
+        &Block {
+            min-height: 80px;
+            height: 80px;
+        }
+    }
+    &ActionButtons {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        padding: 0 10px 0 0;
+    }
+}

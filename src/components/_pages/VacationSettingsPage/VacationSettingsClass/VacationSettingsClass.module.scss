@@ -1,0 +1,42 @@
+@import "@/scss";
+
+.class {
+    margin: 25px 0;
+
+    &Items {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        margin: 15px 0 0 0;
+
+        max-width: 375px;
+
+        gap: 5px;
+        grid-gap: 5px;
+    }
+
+    &Item {
+        &Button {
+            @include transition;
+
+            position: relative;
+            width: 100%;
+
+            background-color: $color-blue-main;
+
+            border-radius: $border-radius-mini;
+
+            aspect-ratio: 1 / 1;
+
+            cursor: pointer;
+
+            &.active {
+                background-color: $color-green-main;
+            }
+
+            svg {
+                @include width-height(50%, 50%);
+            }
+        }
+    }
+}

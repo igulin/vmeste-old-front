@@ -1,0 +1,38 @@
+@import "@/scss";
+
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+    flex-wrap: nowrap;
+
+    cursor: pointer;
+
+    &Box {
+        @include fixed-width-height(25px, 25px);
+        @include fcc;
+
+        position: relative;
+
+        border: 1px solid $color-white-main;
+
+        border-radius: $border-radius-mini;
+
+        svg {
+            @include transition;
+
+            opacity: 0;
+        }
+
+        &.active {
+            svg {
+                opacity: 1;
+            }
+        }
+    }
+
+    &Text {
+        font-size: $fz-small;
+    }
+}

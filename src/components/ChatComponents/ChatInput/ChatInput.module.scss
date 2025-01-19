@@ -1,0 +1,17 @@
+@import "@/scss";
+
+.form {
+    display: flex;
+    gap: 10px;
+
+    width: 100%;
+
+    &Button {
+        @include fixed-width-height(40px, 40px);
+        @include fcc;
+
+        border-radius: $border-radius-mini;
+
+        background-color: $color-white-main;
+    }
+}

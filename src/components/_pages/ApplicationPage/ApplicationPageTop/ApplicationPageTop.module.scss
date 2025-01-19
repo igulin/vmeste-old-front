@@ -1,0 +1,7 @@
+@import "@/scss";
+
+.top {
+    @include fcb;
+    flex-wrap: wrap;
+    gap: 10px;
+}

@@ -1,0 +1,42 @@
+@import "@/scss";
+
+.tags {
+    &Form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &Items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    &Item {
+        @include fc_;
+
+        border-radius: $border-radius-small;
+
+        background-color: $color-green-main;
+
+        padding: 10px;
+
+        color: $color-dark-main;
+
+        font-size: $fz-small;
+
+        cursor: pointer;
+
+        &Button {
+            @include fcc;
+
+            cursor: pointer;
+
+            background-color: transparent;
+            svg {
+                margin: 0 5px 0 0;
+            }
+        }
+    }
+}

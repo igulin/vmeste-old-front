@@ -1,0 +1,13 @@
+@import "@/scss";
+
+.delivery {
+    &Input {
+        &:not(:last-child) {
+            margin: 0 0 10px 0;
+        }
+    }
+
+    &Button {
+        width: 100%;
+    }
+}

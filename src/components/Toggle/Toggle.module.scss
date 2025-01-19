@@ -1,0 +1,46 @@
+@import "@/scss";
+
+.toggle {
+    @include fc_;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    width: fit-content;
+
+    cursor: pointer;
+
+    &Text {
+        font-size: $fz-small;
+    }
+
+    &Box {
+        @include width-height(50px, 30px);
+
+        position: relative;
+
+        background-color: $color-white-main;
+
+        border-radius: $border-radius-mini;
+
+        &.active {
+            &::before {
+                background-color: $color-blue-main;
+                left: 20px;
+            }
+        }
+
+        &::before {
+            @include width-height(25px, 25px);
+            @include absolute-t-l(3px, 3px);
+            @include transition;
+
+            content: "";
+
+            background-color: $color-red-main;
+
+            border-radius: $border-radius-mini;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@import "@/scss";
+
+.chat {
+    &Button {
+        cursor: pointer;
+
+        @include fcc;
+        @include width-height(40px, 40px);
+
+        position: fixed;
+
+        bottom: 20px;
+        right: 20px;
+
+        background-color: $color-blue-main;
+
+        color: $color-white-main;
+
+        border-radius: $border-radius-mini;
+    }
+}

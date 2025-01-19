@@ -1,0 +1,37 @@
+@import "@/scss";
+
+.user {
+    display: flex;
+    align-items: flex-start;
+
+    &Image {
+        @include fixed-width-height(50px, 50px);
+
+        margin: 0 10px 0 0;
+
+        &.big {
+            @include fixed-width-height(150px, 150px);
+        }
+
+        img {
+            @include width-height(100%, 100%);
+            object-fit: cover;
+            border-radius: $border-radius-mini;
+        }
+    }
+
+    &Info {
+        &Name {
+            margin: 0 0 5px 0;
+        }
+
+        &Text {
+            color: $color-grey-main;
+            font-size: $fz-small;
+
+            span {
+                color: $color-blue-main;
+            }
+        }
+    }
+}

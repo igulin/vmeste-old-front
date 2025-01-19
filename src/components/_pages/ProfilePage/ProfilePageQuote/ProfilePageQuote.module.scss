@@ -1,0 +1,30 @@
+@import "@/scss";
+.root {
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.leftRoot {
+    display: flex;
+    column-gap: 10px;
+}
+.image {
+    border-radius: 50%;
+    overflow: hidden;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+}
+.status {
+    font-size: 14px;
+    font-weight: 400;
+}
+.opened {
+    color: $color-green-main;
+}
+.closed {
+    color: $color-red-main;
+}
+.button {
+}

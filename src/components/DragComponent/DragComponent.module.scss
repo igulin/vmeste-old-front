@@ -1,0 +1,7 @@
+@import "@/scss";
+
+.drag {
+    cursor: grab;
+    overflow-x: scroll;
+    @include scrollbarHide;
+}

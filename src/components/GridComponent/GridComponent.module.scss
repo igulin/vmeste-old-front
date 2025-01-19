@@ -1,0 +1,14 @@
+@import "@/scss";
+
+.grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+    grid-gap: 10px;
+
+    @include mobile-start {
+        grid-template-columns: 1fr;
+    }
+}

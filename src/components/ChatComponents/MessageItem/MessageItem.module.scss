@@ -1,0 +1,140 @@
+@import "@/scss";
+
+.message {
+    display: flex;
+    align-items: flex-end;
+
+    color: $color-white-main;
+
+    &:not(:last-child) {
+        margin: 0 0 10px 0;
+    }
+
+    &:last-child {
+        position: relative;
+    }
+
+    &Image {
+        @include fixed-width-height(35px, 35px);
+
+        margin: 0 5px 0 0;
+
+        img {
+            @include width-height(100%, 100%);
+            object-fit: cover;
+            border-radius: $border-radius-mini;
+        }
+    }
+
+    &Content {
+        background-color: $color-dark-main;
+
+        border-radius: $border-radius-main $border-radius-main
+            $border-radius-main $border-radius-mini;
+
+        padding: 5px 10px;
+
+        &.white {
+            background-color: $color-white-main;
+            color: $color-dark-main;
+        }
+
+        &Name {
+            margin: 0 0 5px 0;
+        }
+
+        &Text {
+            font-size: $fz-small;
+
+            &Link {
+                text-decoration: underline;
+            }
+        }
+
+        &Option {
+            &Title {
+            }
+
+            &Items {
+                margin: 10px 0;
+                display: flex;
+                flex-direction: column;
+            }
+
+            &Item {
+                @include fc_;
+
+                background-color: transparent;
+
+                color: inherit;
+
+                font-size: $fz-small;
+
+                cursor: pointer;
+
+                &:not(:last-child) {
+                    margin: 0 0 10px 0;
+                }
+
+                &.white > &Circle {
+                    border-color: $color-dark-main;
+                    &::before {
+                        background-color: $color-dark-main;
+                    }
+                }
+
+                &Circle {
+                    @include fixed-width-height(20px, 20px);
+
+                    position: relative;
+
+                    border: 1px solid $color-white-main;
+
+                    border-radius: $border-radius-main;
+
+                    margin: 0 5px 0 0;
+
+                    &::before {
+                        @include width-height(15px, 15px);
+                        @include transition;
+
+                        content: "";
+
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+
+                        transform: translate(-50%, -50%);
+
+                        background-color: $color-white-main;
+
+                        border-radius: $border-radius-main;
+
+                        opacity: 0;
+                    }
+
+                    &.active {
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            &Votes {
+                font-size: $fz-small;
+            }
+        }
+    }
+
+    &.fromMe {
+        justify-content: right;
+
+        .messageContent {
+            border-radius: $border-radius-main $border-radius-main
+                $border-radius-mini $border-radius-main;
+
+            background-color: $color-blue-main;
+        }
+    }
+}

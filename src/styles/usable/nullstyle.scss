@@ -1,0 +1,63 @@
+@import "./index.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    @include width-height(100%, 100%);
+
+    font-family: "Open Sans", sans-serif;
+
+    font-size: $fz-main;
+
+    background-color: $color-dark-main;
+
+    color: $color-white-main;
+}
+
+#__next {
+    @include width-height(100%, 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: transparent;
+}

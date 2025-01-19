@@ -1,0 +1,25 @@
+@import "@/scss";
+
+.info {
+    &Details {
+        &Title {
+            margin: 0 0 15px 0;
+        }
+
+        &Other {
+            margin: 15px 0 0 0;
+
+            font-size: $fz-small;
+
+            &Text {
+                span {
+                    color: $color-blue-main;
+                }
+
+                &:not(:last-child) {
+                    margin: 0 0 10px 0;
+                }
+            }
+        }
+    }
+}

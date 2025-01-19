@@ -1,0 +1,11 @@
+@import "@/scss";
+
+.invite {
+    &Button {
+        margin: 15px 0 0 0;
+        width: 100%;
+    }
+    &Text {
+        font-size: $fz-small;
+    }
+}

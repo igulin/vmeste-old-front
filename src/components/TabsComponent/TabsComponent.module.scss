@@ -1,0 +1,15 @@
+@import "@/scss";
+
+.tabs {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    &Item {
+        @include fcc;
+
+        width: 100%;
+    }
+}

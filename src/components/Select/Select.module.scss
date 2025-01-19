@@ -1,0 +1,114 @@
+@import "@/scss";
+
+.select {
+    position: relative;
+
+    &Current {
+        @include width-height(100%, 40px);
+
+        position: relative;
+
+        background-color: $color-white-main;
+
+        color: $color-dark-main;
+
+        padding: 0 10px;
+
+        border-radius: $border-radius-mini;
+
+        font-size: $fz-small;
+
+        cursor: pointer;
+
+        &.active {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+
+        &Text {
+            @include width-height(100%, 100%);
+            @include fc_;
+        }
+
+        svg {
+            @include transition;
+
+            position: absolute;
+
+            top: 10px;
+            right: 10px;
+
+            pointer-events: none;
+        }
+    }
+
+    &Items {
+        @include transition;
+
+        position: absolute;
+        top: 45px;
+        left: 0;
+
+        width: 100%;
+
+        max-height: 200px;
+
+        overflow: auto;
+
+        background-color: $color-white-main;
+
+        border-radius: $border-radius-mini;
+
+        border: 2px solid $color-blue-main;
+
+        z-index: 5;
+
+        &Text {
+            width: calc(100% + 50px);
+            left: -50%;
+        }
+    }
+
+    &Button {
+        @include transition;
+
+        width: 100%;
+
+        text-align: left;
+
+        padding: 10px;
+
+        font-size: $fz-small;
+
+        background-color: $color-white-main;
+
+        cursor: pointer;
+
+        &.active {
+            background-color: $color-green-main;
+        }
+
+        @include hover {
+            opacity: 0.8;
+
+            background-color: $color-green-main;
+        }
+
+        &:not(:last-child) {
+            border-bottom: $global-border;
+        }
+    }
+
+    &TypeText {
+        background-color: transparent;
+
+        &Paragraph {
+            color: $color-blue-main;
+        }
+
+        svg {
+            display: none;
+        }
+    }
+}

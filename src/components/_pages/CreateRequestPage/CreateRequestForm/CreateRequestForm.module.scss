@@ -1,0 +1,16 @@
+@import "@/scss";
+
+.request {
+    &Inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        margin: 25px 0;
+    }
+
+    &Button {
+        margin: auto 0 0 0;
+        width: 100%;
+    }
+}

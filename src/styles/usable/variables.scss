@@ -1,0 +1,40 @@
+// Fonts
+
+$fz-medium: 20px;
+
+$fz-main: 18px;
+$fz-small: 16px;
+$fz-mini: 14px;
+
+// Colors
+
+$color-white-main: rgb(255, 255, 255);
+
+$color-dark-main: rgb(25, 24, 26);
+$color-dark-main-lighten: rgb(39, 39, 39);
+
+$color-grey-main: rgb(167, 167, 167);
+
+$color-blue-main: rgb(63, 163, 255);
+
+$color-red-main: rgb(255, 125, 125);
+
+$color-green-main: rgb(126, 245, 171);
+
+// Borders
+
+$border-radius-main: 12px;
+$border-radius-small: 8px;
+$border-radius-mini: 4px;
+
+$global-border: 1px solid $color-grey-main;
+
+// Device resolutions
+
+$resolution-desktop-small: 1100px;
+
+$resolution-mobile-start: 768px;
+
+// Mouse check variable
+
+$mouseDevice: "(hover: hover) and (pointer: fine)";

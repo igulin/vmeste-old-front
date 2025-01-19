@@ -1,0 +1,9 @@
+@import "@/scss";
+
+.line {
+    @include width-height(100%, 1px);
+
+    background-color: $color-grey-main;
+
+    margin: 20px 0;
+}

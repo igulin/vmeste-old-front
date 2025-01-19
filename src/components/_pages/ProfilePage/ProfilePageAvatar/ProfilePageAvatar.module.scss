@@ -1,0 +1,11 @@
+@import "@/scss";
+
+.avatar {
+    @include fixed-width-height(150px, 150px);
+
+    &Image {
+        @include border-rounded;
+        @include width-height(100%, 100%);
+        object-fit: cover;
+    }
+}

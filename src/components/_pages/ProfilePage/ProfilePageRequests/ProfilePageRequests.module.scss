@@ -1,0 +1,27 @@
+@import "@/scss";
+
+.request {
+    margin: 25px 0 auto 0;
+
+    &Block {
+        &Error {
+            @include fcc;
+
+            flex-direction: column;
+
+            width: 100%;
+
+            &Text {
+                margin: 10px 0;
+            }
+        }
+
+        &:not(:last-child) {
+            margin: 0 0 25px 0;
+        }
+    }
+
+    &Items {
+        margin: 25px 0 0 0;
+    }
+}

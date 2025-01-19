@@ -1,0 +1,119 @@
+@import "@/scss";
+
+.modal {
+    @include fcc;
+    @include width-height(100vw, 100vh);
+    @include transition;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    z-index: 5;
+
+    &.active {
+        pointer-events: all;
+        opacity: 1;
+    }
+
+    &Content {
+        @include width-height(90%, 80%);
+
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+
+        background-color: $color-dark-main-lighten;
+
+        border-radius: $border-radius-mini;
+
+        border: $global-border;
+
+        color: $color-white-main;
+
+        z-index: 2;
+
+        &.fit {
+            max-width: 90%;
+            max-height: 80%;
+
+            @include width-height(auto, auto);
+        }
+
+        &Title {
+            padding: 10px;
+
+            border-bottom: $global-border;
+        }
+
+        &Close {
+            @include width-height(40px, 40px);
+
+            position: absolute;
+            top: -20px;
+            right: -20px;
+
+            background-color: $color-dark-main;
+
+            border-radius: $border-radius-mini;
+
+            cursor: pointer;
+
+            @include mobile-start {
+                @include width-height(30px, 30px);
+
+                top: -15px;
+                right: -5px;
+            }
+
+            span {
+                @include width-height(20px, 2px);
+
+                position: absolute;
+
+                top: 50%;
+                left: 50%;
+
+                margin: -1px 0 0 -10px;
+
+                background-color: $color-white-main;
+
+                &:first-child {
+                    transform: rotate(45deg);
+                }
+                &:last-child {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+        &Wrapper {
+            padding: 10px;
+            flex: 0 1 100%;
+            overflow: auto;
+        }
+
+        &Footer {
+            border-top: $global-border;
+
+            padding: 10px;
+        }
+    }
+
+    &Bg {
+        @include width-height(100%, 100%);
+
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        background-color: $color-white-main;
+        opacity: 0.2;
+    }
+}

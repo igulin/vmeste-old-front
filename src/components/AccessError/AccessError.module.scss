@@ -1,0 +1,7 @@
+@import "@/scss";
+
+.text {
+    @include fcc;
+    @include width-height(100%, 100%);
+    text-align: center;
+}

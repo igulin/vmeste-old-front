@@ -1,0 +1,75 @@
+@import "@/scss";
+
+.input {
+    @include width-height(100%, 40px);
+    @include transition;
+
+    border-radius: $border-radius-mini;
+
+    padding: 10px;
+
+    font-family: inherit;
+
+    outline: 0;
+
+    border: 2px solid transparent;
+
+    &.bordered {
+        border: $global-border;
+    }
+
+    &:focus {
+        border-color: $color-blue-main;
+    }
+
+    &:focus + &Placeholder {
+        opacity: 0;
+    }
+
+    &::placeholder {
+        font-family: inherit;
+    }
+
+    &Textarea {
+        resize: vertical;
+        min-width: 100%;
+        min-height: 100px;
+        height: 100px;
+        max-height: 150px;
+        transition: 0.1s all ease;
+    }
+
+    &Wrapper {
+        position: relative;
+        @include width-height(100%, 40px);
+    }
+
+    &Placeholder {
+        @include absolute-t-l(0, 0);
+        @include width-height(100%, 100%);
+        @include transition;
+
+        z-index: 2;
+
+        background-color: $color-white-main;
+
+        border-radius: $border-radius-mini;
+
+        color: $color-dark-main;
+
+        padding: 10px;
+
+        font-size: $fz-small;
+
+        pointer-events: none;
+
+        overflow: hidden;
+
+        white-space: nowrap;
+
+        text-overflow: ellipsis;
+    }
+}
+.input[disabled] {
+    cursor: not-allowed;
+}

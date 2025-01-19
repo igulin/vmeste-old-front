@@ -1,0 +1,53 @@
+@import "@/scss";
+
+.button {
+    @include transition;
+    @include fcc;
+
+    padding: 10px 20px;
+
+    background-color: $color-blue-main;
+
+    width: fit-content;
+
+    font-family: inherit;
+    font-weight: bold;
+
+    text-align: center;
+
+    font-size: $fz-small;
+
+    color: $color-white-main;
+
+    border-radius: $border-radius-mini;
+
+    cursor: pointer;
+
+    &.disabled {
+        opacity: 0.6;
+        @include hover {
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+    }
+
+    @include hover {
+        opacity: 0.8;
+    }
+
+    &.white {
+        background-color: $color-white-main;
+
+        color: $color-dark-main;
+    }
+
+    &.red {
+        background-color: $color-red-main;
+    }
+
+    &.green {
+        background-color: $color-green-main;
+
+        color: $color-dark-main;
+    }
+}

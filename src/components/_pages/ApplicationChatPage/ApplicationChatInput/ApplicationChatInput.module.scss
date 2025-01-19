@@ -1,0 +1,68 @@
+@import "@/scss";
+
+.input {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+
+    background-color: $color-dark-main;
+
+    &Container {
+        display: flex;
+        gap: 10px;
+        flex-direction: row;
+    }
+
+    &Block {
+        @include fixed-width-height(100%, 60px);
+    }
+
+    &Add {
+        @include fcc;
+        @include width-height(40px, 40px);
+
+        border-radius: $border-radius-mini;
+
+        background-color: $color-white-main;
+
+        &Modal {
+            width: 500px;
+
+            @include mobile-start {
+                width: 80vw;
+            }
+        }
+
+        &Options {
+            &Title {
+                font-weight: bold;
+
+                margin: 20px 0;
+            }
+
+            &Item {
+                display: flex;
+                align-items: flex-start;
+
+                &:not(:last-child) {
+                    margin: 0 0 10px 0;
+                }
+
+                &Button {
+                    @include fixed-width-height(40px, 40px);
+                    @include fcc;
+
+                    border: $global-border;
+
+                    background-color: $color-white-main;
+
+                    margin: 0 0 0 10px;
+
+                    border-radius: $border-radius-mini;
+                }
+            }
+        }
+    }
+}

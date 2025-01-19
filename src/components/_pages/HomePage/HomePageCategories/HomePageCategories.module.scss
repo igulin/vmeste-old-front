@@ -1,0 +1,15 @@
+@import "@/scss";
+
+.categories {
+    &Items {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        margin: 25px 0;
+    }
+
+    &Item {
+        width: 100%;
+    }
+}

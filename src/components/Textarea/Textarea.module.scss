@@ -1,0 +1,39 @@
+@import "@/scss";
+
+.textarea {
+  @include width-height(100%, 40px);
+
+  border-radius: $border-radius-mini;
+
+  padding: 10px;
+
+  font-family: inherit;
+
+  outline: 0;
+
+  border: 2px solid transparent;
+
+  resize: none;
+  overflow: hidden;
+  height: 100px;
+
+  &::placeholder {
+    background-color: $color-white-main;
+
+    border-radius: $border-radius-mini;
+
+    color: $color-dark-main;
+
+    padding: 0;
+
+    font-size: $fz-small;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+  }
+}

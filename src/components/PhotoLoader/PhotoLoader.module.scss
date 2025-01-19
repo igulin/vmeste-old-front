@@ -1,0 +1,50 @@
+@import "@/scss";
+
+.photo {
+    @include fixed-width-height(200px, 200px);
+    @include border-rounded;
+
+    position: relative;
+
+    margin: 20px 0 0 0;
+
+    color: $color-white-main;
+
+    background-color: $color-dark-main-lighten;
+
+    overflow: hidden;
+
+    &Change,
+    &Empty,
+    &Image {
+        @include absolute-t-l(0, 0);
+        @include width-height(100%, 100%);
+        object-fit: cover;
+    }
+
+    &Change {
+        @include transition;
+        @include border-rounded;
+
+        color: $color-white-main;
+
+        z-index: 5;
+
+        background-color: $color-dark-main-lighten;
+
+        opacity: 0;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+    &Empty {
+        @include fcc;
+        text-align: center;
+    }
+
+    &Image {
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,25 @@
+@import "@/scss";
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &Name {
+        font-size: 24px;
+        word-break: break-all;
+    }
+
+    &Text {
+        color: $color-grey-main;
+        font-size: $fz-small;
+
+        span {
+            color: $color-blue-main;
+        }
+    }
+    &Block {
+        display: flex;
+        align-items: center;
+    }
+}

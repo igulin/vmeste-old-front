@@ -1,0 +1,218 @@
+@import "@/scss";
+
+.header {
+    @include width-height(100%, 60px);
+    @include fcb;
+
+    min-height: 50px;
+
+    padding: 0 10px;
+
+    position: fixed;
+
+    top: 0;
+
+    border-bottom: $global-border;
+
+    backdrop-filter: blur(15px);
+    z-index: 5;
+
+    &Block {
+        height: 60px;
+        min-height: 60px;
+    }
+
+    &Title {
+        font-weight: bold;
+        font-family: "Open Sans", sans-serif;
+        font-size: 24px;
+    }
+
+    &Button {
+        @include width-height(30px, 30px);
+        @include fcc;
+
+        padding: 5px;
+
+        gap: 4px;
+
+        flex-direction: column;
+
+        border-radius: $border-radius-mini;
+
+        border: $global-border;
+
+        background-color: transparent;
+
+        cursor: pointer;
+
+        &.opened {
+            span {
+                &:nth-child(2) {
+                    width: 0;
+                    transform: rotate(90deg);
+                    opacity: 0;
+                }
+
+                &:first-child {
+                    transform: rotate(45deg);
+                    top: 5px;
+                }
+
+                &:last-child {
+                    transform: rotate(-45deg);
+                    top: -5px;
+                }
+            }
+        }
+
+        span {
+            @include width-height(100%, 1px);
+            @include transition;
+
+            border-radius: $border-radius-main;
+
+            top: 0;
+
+            position: relative;
+
+            background-color: $color-white-main;
+        }
+    }
+
+    &Content {
+        display: flex;
+
+        flex-direction: column;
+
+        position: absolute;
+
+        top: 55px;
+        right: 20px;
+
+        border: $global-border;
+
+        border-radius: $border-radius-small;
+
+        background-color: $color-dark-main;
+
+        &Link {
+            position: relative;
+
+            width: 100%;
+
+            padding: 10px;
+
+            max-width: 200px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+
+            color: $color-white-main;
+            text-align: left;
+
+            &:hover {
+                &::before {
+                    width: calc(100% - 20px);
+                }
+            }
+
+            &::before {
+                @include transition;
+
+                content: "";
+
+                position: absolute;
+
+                left: 10px;
+                bottom: 10px;
+
+                width: 0;
+                height: 1px;
+
+                background-color: $color-white-main;
+            }
+        }
+    }
+
+    &Action {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+
+        svg {
+            cursor: pointer;
+        }
+    }
+
+    &Logotype {
+        display: flex;
+        align-items: end;
+        column-gap: 6px;
+        font-family: "Open Sans", sans-serif;
+
+        span {
+            color: rgb(226, 38, 38);
+            user-select: none;
+            font-size: 15px;
+        }
+    }
+}
+
+.notification {
+    padding: 5px 12px;
+    right: -50%;
+    width: 280px;
+
+    font-size: 14px;
+
+    &Unread {
+        width: 7px;
+        height: 7px;
+
+        background-color: $color-blue-main;
+        border-radius: 50%;
+
+        cursor: pointer;
+    }
+
+    &Block {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+    }
+    &IsRead {
+        width: 10px;
+        height: 10px;
+        background-color: $color-red-main;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    &Root {
+        position: relative;
+        margin: 6px 0 0;
+    }
+    &Content {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+    }
+    &ReadAll {
+        padding: 0 0 10px;
+
+        cursor: pointer;
+        opacity: 0.8;
+
+        transition: opacity 0.2s linear;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+.link {
+    color: $color-blue-main;
+}

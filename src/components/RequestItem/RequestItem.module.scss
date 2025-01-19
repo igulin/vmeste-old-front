@@ -1,0 +1,60 @@
+@import "@/scss";
+
+.request {
+    &Item {
+        &Link {
+            cursor: pointer;
+            display: flex;
+            align-items: flex-start;
+            background-color: $color-dark-main;
+            color: $color-white-main;
+            text-align: left;
+        }
+
+        &Image {
+            @include fixed-width-height(100px, 100px);
+
+            img {
+                @include fixed-width-height(100%, 100%);
+                object-fit: cover;
+
+                border-radius: $border-radius-mini;
+            }
+        }
+
+        &Info {
+            margin: 0 0 0 10px;
+
+            &Top {
+                @include fc_;
+
+                gap: 5px;
+                flex-wrap: wrap;
+
+                &Title {
+                    font-size: $fz-medium;
+                }
+
+                &Status {
+                    color: $color-red-main;
+
+                    font-size: $fz-mini;
+
+                    &.opened {
+                        color: $color-green-main;
+                    }
+                }
+            }
+
+            &Description {
+                margin: 5px 0;
+
+                font-size: $fz-small;
+            }
+
+            &Price {
+                font-size: $fz-mini;
+            }
+        }
+    }
+}

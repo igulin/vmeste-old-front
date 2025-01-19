@@ -1,0 +1,46 @@
+@import "@/scss";
+
+.company {
+    &Button {
+        background-color: transparent;
+        color: $color-white-main;
+
+        width: fit-content;
+
+        text-decoration: underline;
+
+        font-size: $fz-small;
+
+        margin: auto 0 0 0;
+    }
+
+    &Detail {
+        position: relative;
+
+        &Title {
+            font-weight: bold;
+        }
+
+        &Text {
+            font-size: $fz-small;
+            margin: 10px 0 0 0;
+        }
+
+        &:not(:last-child) {
+            padding: 0 0 10px 0;
+
+            margin: 0 0 10px 0;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $color-dark-main;
+                opacity: 0.6;
+            }
+        }
+    }
+}

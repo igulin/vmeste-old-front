@@ -1,0 +1,21 @@
+@import "@/scss";
+
+.additional {
+    &Info {
+        @include fcb;
+
+        gap: 10px;
+
+        flex-wrap: wrap;
+
+        font-size: $fz-small;
+
+        &Group {
+            @include fc_;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+        }
+    }
+}
