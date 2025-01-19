@@ -7,6 +7,7 @@ const nextConfig = {
             "plus.unsplash.com",
             "localhost",
             "vmestebackend-app.ru",
+            "igulin-vmeste-old-front-9961.twc1.net",
         ],
     },
 };
